@@ -1,6 +1,6 @@
 # HomeTeam
 
-### A home chores tracker that allows everyone to see who did what; MVC with MySQL, Node, Express, Handlebars, and Sequelize ORM.
+### A home chores tracker web app that allows everyone to see who did what; MVC with MySQL, Node, Express, Handlebars, and Sequelize ORM.
 
 <!-- *Node, Express, Handlebars, MySQL, JavaScript, jQuery, custom ORM, Heroku deployment, Bootstrap, Font Awesome. MVC web application workout-tracker to-do list with CRUD functionality.* -->
 _________________________________________________
