@@ -1,0 +1,72 @@
+/* ====================================================
+UnGravity :: A workout checklist web app
+MVC with MySQL, Node, Express, Handlebars and custom ORM.
+©2018 Richard Trevillian
+University of Richmond (Virginia)
+Full Stack Developer Bootcamp (July 2018)
+====================================================
+UNGRAVITY.CSS - custom CSS to enhance Bootstrap styles
+==================================================== */
+
+body {
+    background-color: aliceblue;
+}
+
+#top-bar {
+    background-color: #ccc;
+}
+
+.head-light {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: .01rem;
+    margin-right: 2px;
+}
+
+.head-bold {
+    color: #888;
+    font-size: 3rem;
+    letter-spacing: .01rem;
+
+}
+
+.subhead {
+    color: #777;
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: .05rem;
+}
+
+.todo-fin {
+    color: rgb(167, 103, 103);
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.todo-do {
+    color: rgb(78, 116, 145);
+    font-size: 1rem;
+    margin-left: 5px;
+
+}
+
+.todo-num {
+    position: absolute;
+    left: 35px;
+    top: 2px;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.todo-name {
+    position: absolute;
+    left: 70px;
+    top: 2px;
+    font-size: 1rem;
+}
+
+.delete-item {
+    color: #fff;
+    margin-top: 4px;
+    margin-left: 4px;
+}
