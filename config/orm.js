@@ -14,7 +14,7 @@
 // REQUIRE THE DATABASE CONNECTION
 // ========================================================
 // allows the orm.methods database access to make queries on it
-var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 
 // ========================================================

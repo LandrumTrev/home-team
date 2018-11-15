@@ -18,14 +18,14 @@ INDEX.HANDLEBARS - BODY tag contents for root/index page
 
 <main class="container">
 
-    {{!-- ADD NEW ITEM SECTION --}}
+    {{!-- ADD NEW TASK SECTION --}}
     <br>
     <h2 class="subhead">add</h2>
     <form class="create-form">
         <div class="form-group input-group mb-0">
-            <input id="new-item" type="text" class="form-control" placeholder="Add a new item to the list" name="item">
+            <input id="new-task" type="text" class="form-control" placeholder="Add a new task to the list" name="task">
             <div class="input-group-append">
-                <button class="btn btn-danger btn-sm" type="submit" value="Submit">add item</button>
+                <button class="btn btn-danger btn-sm" type="submit" value="Submit">add task</button>
             </div>
         </div>
     </form>
@@ -34,17 +34,17 @@ INDEX.HANDLEBARS - BODY tag contents for root/index page
     <br>
     <h2 class="subhead">to-do</h2>
     <ul class="list-group mb-0">
-        {{!-- loop over res.render("index", hbsObject); from items_controller.js --}}
-        {{#each items}}
-        {{!-- include each item unless done: 1 (true), so include only done: 0 (false) --}}
+        {{!-- loop over res.render("index", hbsObject); from router_controller.js --}}
+        {{#each tasks}}
+        {{!-- include each task unless done: 1 (true), so include only done: 0 (false) --}}
         {{#unless done}}
-        {{!-- use > to include partials/items/item-block.handlebars, which HTML formats each list item --}}
-        {{!-- and AFTER including an item on the page, set its "done:" as "true"... --}}
-        {{!-- which has the effect of making the item's data-newstatus="true"... --}}
-        {{!-- so that true value can be grabbed and use to set the item's done: value in the database... --}}
+        {{!-- use > to include partials/tasks/task-block.handlebars, which HTML formats each list task --}}
+        {{!-- and AFTER including an task on the page, set its "done:" as "true"... --}}
+        {{!-- which has the effect of making the task's data-newstatus="true"... --}}
+        {{!-- so that true value can be grabbed and use to set the task's done: value in the database... --}}
         {{!-- by the .change-status button event handler in todolist.js --}}
-        {{!-- NOTE this only happens AFTER list inclusion, so item is done: false for purpose of inclusion --}}
-        {{> items/item-block done=true}}
+        {{!-- NOTE this only happens AFTER list inclusion, so task is done: false for purpose of inclusion --}}
+        {{> tasks/task-block done=true}}
         {{/unless}}
         {{/each}}
     </ul>
@@ -53,17 +53,17 @@ INDEX.HANDLEBARS - BODY tag contents for root/index page
     <br>
     <h2 class="subhead">done</h2>
     <ul class="list-group mb-0">
-        {{!-- loop over res.render("index", hbsObject); from items_controller.js --}}
-        {{#each items}}
-        {{!-- include each item if it is done: 1 (true) --}}
+        {{!-- loop over res.render("index", hbsObject); from router_controller.js --}}
+        {{#each tasks}}
+        {{!-- include each task if it is done: 1 (true) --}}
         {{#if done}}
-        {{!-- use > to include partials/items/item-block.handlebars, which HTML formats each list item --}}
-        {{!-- and AFTER including an item on the page, set its "done:" as "false"... --}}
-        {{!-- which has the effect of making the item's data-newstatus="false"... --}}
-        {{!-- so that false value can be grabbed and use to set the item's done: value in the database... --}}
+        {{!-- use > to include partials/tasks/task-block.handlebars, which HTML formats each list task --}}
+        {{!-- and AFTER including an task on the page, set its "done:" as "false"... --}}
+        {{!-- which has the effect of making the task's data-newstatus="false"... --}}
+        {{!-- so that false value can be grabbed and use to set the task's done: value in the database... --}}
         {{!-- by the .change-status button event handler in todolist.js --}}
-        {{!-- NOTE this only happens AFTER list inclusion, so item is done: true for purpose of inclusion --}}
-        {{> items/item-block done=false}}
+        {{!-- NOTE this only happens AFTER list inclusion, so task is done: true for purpose of inclusion --}}
+        {{> tasks/task-block done=false}}
         {{/if}}
         {{/each}}
     </ul>
