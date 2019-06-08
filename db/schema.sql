@@ -21,6 +21,7 @@ CREATE DATABASE hometeam_db;
 
 
 
+
 -- -- HEROKU:
 -- USE hx9rdomw5n64340s;
 
